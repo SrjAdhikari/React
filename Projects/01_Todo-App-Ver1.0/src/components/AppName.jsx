@@ -1,7 +1,7 @@
 function AppName() {
 	return (
 		<h1>
-			TODO <App></App>
+			TODO App
 		</h1>
 	);
 }
