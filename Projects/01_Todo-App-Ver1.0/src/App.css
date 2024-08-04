@@ -1,15 +1,14 @@
 h1 {
     font-weight: 700;
     font-size: 45px;
-    margin: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0 30px;
 }
     
 input {
     width: 100%;
 }
 
-.sub-container {
+.items-container {
     text-align: left;
 }
 
