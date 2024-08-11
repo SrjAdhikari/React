@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IoMdAddCircle } from "react-icons/io";
 
 // Define the AddTodo component that allows users to add new todo items
 function AddTodo({ addnewItem }) {
@@ -53,7 +54,8 @@ function AddTodo({ addnewItem }) {
 						className="btn btn-success sub-button" // Bootstrap styling for a success (green) button
 						onClick={handleAddButtonClicked} // Event handler for button click
 					>
-						Add
+						<IoMdAddCircle />
+						{/* Replace 'Add' button text with icon */}
 					</button>
 				</div>
 			</div>
