@@ -1,0 +1,12 @@
+/* .food-item {
+    background-color: rgb(205, 234, 207);
+} */
+
+.food-span {
+    font-weight: 500;
+    color: rgba(229, 26, 26);
+}
+
+.button {
+    float: right;
+}
