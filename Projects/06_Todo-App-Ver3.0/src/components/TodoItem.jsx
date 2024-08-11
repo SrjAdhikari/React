@@ -1,3 +1,5 @@
+import { MdDelete } from "react-icons/md";
+
 // Define the TodoItem component that displays individual todo items
 function TodoItem({ todoItem, dueDate, onDeleteClick }) {
 	return (
@@ -15,7 +17,8 @@ function TodoItem({ todoItem, dueDate, onDeleteClick }) {
 						className="btn btn-danger sub-button" // Bootstrap styling for a dangerous (red) button
 						onClick={() => onDeleteClick(todoItem)} // Event handler to call onDeleteClick with the current todo item
 					>
-						Delete
+						<MdDelete />
+						{/* Replace 'Delete' button text with icon */}
 					</button>
 				</div>
 			</div>
