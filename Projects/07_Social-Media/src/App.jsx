@@ -13,7 +13,12 @@ function App() {
 
 	return (
 		<div className="app-container">
-			<Sidebar />
+			<Sidebar
+				// `selectedTab` prop: This is used to determine which tab is currently active in the Sidebar.
+				selectedTab={selectedTab}
+				// `setSelectedTab` prop: This function is used to update the `selectedTab` state in the parent component (App). when a tab is clicked.
+				setSelectedTab={setSelectedTab}
+			/>
 			<div className="content">
 				<Header />
 				{/* 
