@@ -5,15 +5,23 @@ import Sidebar from "./components/Sidebar";
 import CreatePost from "./components/CreatePost";
 import PostList from "./components/PostList";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+	// State to keep track of the currently selected tab (either "Home" or "Create Post")
+	const [selectedTab, setSelectedTab] = useState("Home");
+
 	return (
 		<div className="app-container">
 			<Sidebar />
 			<div className="content">
 				<Header />
-				<CreatePost />
-				<PostList />
+				{/* 
+					Conditional rendering based on the selected tab:
+					- If "Home" is selected, the PostList component is shown
+					- If any other tab is selected, the CreatePost component is shown 
+				*/}
+				{selectedTab === "Home" ? <PostList /> : <CreatePost />}
 				<Footer />
 			</div>
 		</div>
