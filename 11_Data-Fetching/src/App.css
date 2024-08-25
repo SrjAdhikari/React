@@ -1,0 +1,40 @@
+.app-container {
+    /* Use flexbox to create a layout with a sidebar and content area */
+    display: flex;
+}
+
+.content {
+    /* Make the content area take up the full width available */
+    width: 100%;
+}
+
+.sidebar {
+    /* Ensure the sidebar has a minimum height to cover the full vertical space */
+    min-height: 800px;
+}
+
+.post-card {
+    /* Add margin around each post card for spacing */
+    margin: 20px 50px;
+}
+
+.hashtag {
+    /* Center-align text within the tag and add small horizontal margins */
+    text-align: center;
+    margin: 0 1px;
+}
+
+.reactions {
+    /* Add margin above the reactions section and adjust padding and font styling */
+    margin: 15px 0 0 0;
+    padding: 5px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.create-post {
+    /* Set the form width to 80% and center it horizontally by adding a left margin */
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+}
