@@ -16,8 +16,9 @@ const postListReducer = (currentPostList, action) => {
 		newPostList = currentPostList.filter(
 			(post) => post.id !== action.payload.postId
 		);
+	} else if (action.type === "ADD_POST") {
+		newPostList = [action.payload, ...currentPostList];
 	}
-
 	// Return the updated list of posts
 	return newPostList;
 };
@@ -30,8 +31,26 @@ const PostListProvider = ({ children }) => {
 		DEFAULT_POST_LIST
 	);
 
-	// Function to add a post (currently not implemented)
-	const addPost = () => {};
+	// Function to add a new post to the post list
+	const addPost = (userID, postTitle, postBody, reactions, tags) => {
+		// Dispatch an action to add the new post with provided details
+		dispatchPostList({
+			type: "ADD_POST",
+			payload: {
+				id: Date.now(), // Generate a unique ID based on the current timestamp
+				title: postTitle, // Title of the post
+				body: postBody, // Body content of the post
+				reactions: reactions, // Number of reactions to the post
+				userId: userID, // ID of the user who created the post
+				tags: tags, // Tags associated with the post
+			},
+		});
+
+		// Log the post details for debugging purposes
+		console.log(
+			`Post added: ${userID}, ${postTitle}, ${postBody}, ${reactions}, ${tags}`
+		);
+	};
 
 	// Function to delete a post by dispatching the DELETE_POST action
 	const deletePost = (postId) => {
